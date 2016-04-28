@@ -2,7 +2,7 @@ function [u,v] = LK(image1, image2)
 % Lucas-Kanade: Optical Flow
    [I_x, I_y, I_t] = find_deriv(image1, image2);
    u = zeros(size(image1));
-   v = zeros(size(image2));
+   v = zeros(size(image1));
    window = 5;
    half_win = floor(window/2);
    for i = 1+half_win:size(I_x, 1)-half_win
